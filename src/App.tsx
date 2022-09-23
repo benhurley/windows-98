@@ -83,6 +83,10 @@ const App = () => {
   margin-bottom: 20px;
 `
 
+  const Button = styled.button`
+  color: black;
+`
+
   const Minimized = styled.div`
   position: absolute;
   left: 0;
@@ -114,9 +118,9 @@ const App = () => {
           <TextRow>If you're here, you're interested in something...</TextRow>
           <TextRow>Probably one of these:</TextRow>
           <ButtonsContainer>
-            <Link style={{ marginRight: 10 }} target="_blank" rel="noopener noreferrer" href={"https://github.com/benhurley"}><button>Github</button></Link>
-            <Link style={{ marginRight: 10 }} target="_blank" rel="noopener noreferrer" href={"https://linkedin.com/in/benjamin-hurley"}><button>Linkedin</button></Link>
-            <Link href={"mailto:benfromtech@gmail.com"}><button>Email</button></Link>
+            <Link style={{ marginRight: 10 }} target="_blank" rel="noopener noreferrer" href={"https://github.com/benhurley"}><Button>Github</Button></Link>
+            <Link style={{ marginRight: 10 }} target="_blank" rel="noopener noreferrer" href={"https://linkedin.com/in/benjamin-hurley"}><Button>Linkedin</Button></Link>
+            <Link href={"mailto:benfromtech@gmail.com"}><Button>Email</Button></Link>
           </ButtonsContainer>
           <TextRow>Or one of the cool websites I've built?</TextRow>
           <List>
@@ -156,7 +160,7 @@ const App = () => {
             <TextRow>Lucky for you, I also have a &nbsp; <i>real</i> &nbsp; website.</TextRow>
             <Link target="_blank" rel="noopener noreferrer" href={"https://benhurley.dev"}>
               <ButtonsContainer>
-                <button onClick={handleMaximized}>Go</button>
+                <Button>Get me out of here</Button>
               </ButtonsContainer>
             </Link>
           </div>
