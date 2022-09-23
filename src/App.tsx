@@ -105,13 +105,13 @@ const App = () => {
       {showWindow && !showMinimized &&
         <Window className="window">
           <div className="title-bar">
-            <div className="title-bar-text">Welcome to Ben's Website!</div>
+            <div className="title-bar-text">Welcome to Ben's Portfolio</div>
             <div className="title-bar-controls">
               <button aria-label="Minimize" onClick={handleMinimized}></button>
               <button aria-label="Close" onClick={handleClosed}></button>
             </div>
           </div>
-          <TextRow>If you're here, you're interesting in something...</TextRow>
+          <TextRow>If you're here, you're interested in something...</TextRow>
           <TextRow>Probably one of these:</TextRow>
           <ButtonsContainer>
             <Link style={{ marginRight: 10 }} target="_blank" rel="noopener noreferrer" href={"https://github.com/benhurley"}><button>Github</button></Link>
