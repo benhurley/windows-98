@@ -149,11 +149,11 @@ const App = () => {
       {!showWindow &&
         <Window className="window">
           <div className="title-bar">
-            <div className="title-bar-text">Had enough Windows 98 Nostalgia?</div>
+            <div className="title-bar-text">Had Enough Windows 98 Nostalgia?</div>
           </div>
           <div style={{ display: 'block', justifyContent: 'center', textAlign: 'center' }}>
             <TextRow>Happens to the best of us...</TextRow>
-            <TextRow>Lucky for you, I also have a real website.</TextRow>
+            <TextRow>Lucky for you, I also have a &nbsp; <i>real</i> &nbsp; website.</TextRow>
             <Link target="_blank" rel="noopener noreferrer" href={"https://benhurley.dev"}>
               <ButtonsContainer>
                 <button onClick={handleMaximized}>Go</button>
