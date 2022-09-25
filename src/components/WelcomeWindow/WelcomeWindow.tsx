@@ -40,7 +40,7 @@ export const WelcomeWindow = (): ReactElement => {
     position: absolute;
     left: 0;
     bottom: ${isMobile ? '30px' : '48px'};
-    width: 200px;
+    width: 150px;
   `
 
     return (
