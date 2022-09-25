@@ -75,10 +75,10 @@ export const WelcomeWindow = (): ReactElement => {
                 <TextRow>Maybe one of the tools I made for free?</TextRow>
                 <List>
                     <ListEntry>
-                        <Link target="_blank" rel="noopener noreferrer" href={"https://cryptocost.netlify.app"}>Crypto Cost-basis Calculator</Link>
+                        <Link target="_blank" rel="noopener noreferrer" href={"https://cryptocost.benhurley.dev"}>Crypto Cost-basis Calculator</Link>
                     </ListEntry>
                     <ListEntry>
-                        <Link target="_blank" rel="noopener noreferrer" href={"https://nyc-restaurant-info.netlify.app/"}>NYC Restaurant Info</Link>
+                        <Link target="_blank" rel="noopener noreferrer" href={"https://nyc.benhurley.dev/"}>NYC Restaurant Info</Link>
                     </ListEntry>
                 </List>
                 <div className="status-bar">
