@@ -34,5 +34,5 @@ margin-bottom: 10px;
 
 export const Link = styled.a`
 color: black;
-margin-right: 10px;
+margin-right: 5px;
 `
