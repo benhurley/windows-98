@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Window = styled.div`
-width: 80%;
+width: 90%;
 max-width: 275px;
 margin-left: auto;
 margin-right: auto;
@@ -16,11 +16,12 @@ margin-top: 10px;
 
 export const ButtonsContainer = styled.div`
 margin-left: 10px;
-margin-bottom: 20px;
+margin-bottom: 10px;
 `
 
 export const Button = styled.button`
 color: black;
+margin-bottom: 10px;
 `
 
 export const List = styled.ul`
