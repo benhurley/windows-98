@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react';
 import styled from 'styled-components';
-import './App.css';
 import "98.css";
 
 export function useWindowSize() {
@@ -29,7 +28,7 @@ const App = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCpuNum(randomNumberInRange(10, 25));
-    }, 1000); // runs every 1 seconds
+    }, 50000); // runs every 5 seconds
 
     return () => {
       clearInterval(interval);
@@ -64,6 +63,12 @@ const App = () => {
   background-size: cover;
 `
 
+  const CenteredContainer = styled.div`
+  display: block;
+  justify-content: center;
+  text-align: center;
+`
+
   const Window = styled.div`
   width: 80%;
   max-width: 275px;
@@ -90,7 +95,8 @@ const App = () => {
   const Minimized = styled.div`
   position: absolute;
   left: 0;
-  bottom: ${isMobile ? '35px' : '48px'};
+  bottom: ${isMobile ? '30px' : '48px'};
+  width: 200px;
 `
 
   const List = styled.ul`
@@ -103,6 +109,7 @@ const App = () => {
 
   const Link = styled.a`
   color: black;
+  margin-right: 10px;
 `
   return (
     <AppContainer>
@@ -118,11 +125,11 @@ const App = () => {
           <TextRow>If you're here, you're interested in something...</TextRow>
           <TextRow>Probably one of these:</TextRow>
           <ButtonsContainer>
-            <Link style={{ marginRight: 10 }} target="_blank" rel="noopener noreferrer" href={"https://github.com/benhurley"}><Button>Github</Button></Link>
-            <Link style={{ marginRight: 10 }} target="_blank" rel="noopener noreferrer" href={"https://linkedin.com/in/benjamin-hurley"}><Button>Linkedin</Button></Link>
+            <Link target="_blank" rel="noopener noreferrer" href={"https://github.com/benhurley"}><Button>Github</Button></Link>
+            <Link target="_blank" rel="noopener noreferrer" href={"https://linkedin.com/in/benjamin-hurley"}><Button>Linkedin</Button></Link>
             <Link href={"mailto:benfromtech@gmail.com"}><Button>Email</Button></Link>
           </ButtonsContainer>
-          <TextRow>Or one of the cool websites I've built?</TextRow>
+          <TextRow>Or one of the cool websites I've built:</TextRow>
           <List>
             <ListEntry>
               <Link target="_blank" rel="noopener noreferrer" href={"https://daily-harvest.com"}>Daily Harvest</Link>
@@ -155,20 +162,17 @@ const App = () => {
           <div className="title-bar">
             <div className="title-bar-text">Had Enough Windows 98 Nostalgia?</div>
           </div>
-          <div style={{ display: 'block', justifyContent: 'center', textAlign: 'center' }}>
-            <TextRow>Happens to the best of us...</TextRow>
+          <CenteredContainer>
             <TextRow>Lucky for you, I also have a &nbsp; <i>real</i> &nbsp; website.</TextRow>
             <Link target="_blank" rel="noopener noreferrer" href={"https://benhurley.dev"}>
-              <ButtonsContainer>
-                <Button>Get me out of here</Button>
-              </ButtonsContainer>
+              <Button style={{ marginBottom: 10 }}>Get me out of here</Button>
             </Link>
-          </div>
+          </CenteredContainer>
         </Window>
       }
       {
         showMinimized &&
-        <Minimized className="title-bar" style={{ "width": 200 }}>
+        <Minimized className="title-bar">
           <div className="title-bar-text">Ben's Website</div>
           <div className="title-bar-controls">
             <button aria-label="Maximize" onClick={handleMaximized}></button>
